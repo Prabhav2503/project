@@ -42,8 +42,8 @@ const data3 = [
 
 const Card = ({ title, description }) => {
   return (
-  <div className="rounded-2xl border-2 border-red-500 flex flex-col items-center justify-start w-80 h-100 p-5 gap-3" style={{fontFamily:"Sora"}}>
-        <h1 className="text-red-500 text-2xl mt-30 font-semibold">{title}</h1>
+  <div className="rounded-2xl border-2 border-red-500 flex flex-col items-center justify-start w-60 xl:w-80 h-100 p-5 gap-3" style={{fontFamily:"Sora"}}>
+        <h1 className="text-red-500 text-xl xl:text-2xl mt-30 font-semibold">{title}</h1>
         <p className="text-center font-semibold">{description}</p>
   </div>);
 };
@@ -70,16 +70,16 @@ const Stats = () => {
         className="size-[900px] absolute right-0 top-0 -translate-y-48"
       />
       <div className="flex flex-col w-full z-10">
-        <img src={arrow3} alt="" className="size-50" /> 
-        <div className="w-full flex flex-col pl-60">
+        <img src={arrow3} alt="" className="hidden lg:block size-50" /> 
+        <div className="w-full flex flex-col xl:flex-row pl-6 lg:pl-60">
           <h2 className="font-bold text-4xl">Powering the Logistics of Tomorrow</h2>
-          <div className="w-full flex items-center justify-start gap-10 pt-10">
-            {data3.map(({ title, value, description }) => (
-              <div className="rounded-2xl bg-white border-2 border-red-500 p-5 flex flex-col items-center justify-center gap-5 w-80 h-50" style={{fontFamily:"Sora"}}>
-                <h3 className=" font-bold text-2xl">{title}</h3>
+          <div className="w-full flex flex-col lg:flex-row items-center justify-start gap-10 pt-10">
+            {data3.map((item, idx) => (
+              <div key={idx} className="rounded-2xl bg-white border-2 border-red-500 p-5 flex flex-col items-center justify-center gap-5 w-80 h-50" style={{fontFamily:"Sora"}}>
+                <h3 className=" font-bold text-2xl">{item.title}</h3>
                 <div className="flex flex-col items-center justify-center gap-2">
-                  <p className="font-bold text-red-500 text-xl">{value}</p>
-                  <p className="text-xl">{description}</p>
+                  <p className="font-bold text-red-500 text-xl">{item.value}</p>
+                  <p className="text-xl">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -93,42 +93,42 @@ const Stats = () => {
 const Steps = () => {
   return (
     <div className="w-full">
-      <div className="w-full flex flex-col items-end pr-80 pt-20" style={{fontFamily:"Sora"}}>
+      <div className="w-full flex flex-col items-end pr-4 lg:pr-80 pt-20" style={{fontFamily:"Sora"}}>
         <h2 className="font-bold text-red-500 text-5xl">3 Steps</h2>
         <p className="font-bold text-3xl">to Your First Paycheck</p>
       </div>
 
       {/* Box1 */}
-      <div className="w-full flex items-center justify-center gap-1 pt-10">
+      <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4 pt-10">
         <div className="flex items-center justify-center gap-3 p-5 border-2 border-red-500 rounded-2xl">
-          <h2 className="text-red-500 text-9xl">1</h2>
+          <h2 className="text-red-500 text-6xl lg:text-9xl">1</h2>
           <div className="flex flex-col items-center gap-3">
-            <p className="font-bold text-3xl">Apply & Verify</p>
-            <p className="text-xl">First digital KYC. Upload your <br /> documents in minutes.</p>
+            <p className="font-bold text-2xl lg:text-3xl">Apply & Verify</p>
+            <p className="text-base lg:text-xl">First digital KYC. Upload your <br /> documents in minutes.</p>
           </div>
         </div>
-        <img src={arrow5} alt="" className="size-32" />
+        <img src={arrow5} alt="" className="hidden lg:block size-32" />
       </div>
 
       {/* Box2 */}
-      <div className="w-full flex flex-row-reverse items-center justify-center gap-1 pt-10">
+      <div className="w-full flex flex-col lg:flex-row-reverse items-center justify-center gap-4 pt-10">
         <div className="flex items-center justify-center gap-3 p-5 border-2 border-red-500 rounded-2xl">
-          <h2 className="text-red-500 text-9xl">2</h2>
+          <h2 className="text-red-500 text-6xl lg:text-9xl">2</h2>
           <div className="flex flex-col items-center gap-3">
-            <p className="font-bold text-3xl">Pick Your DASH</p>
-            <p className="text-xl">Choose your Scooter. Get your <br /> power-pack.</p>
+            <p className="font-bold text-2xl lg:text-3xl">Pick Your DASH</p>
+            <p className="text-base lg:text-xl">Choose your Scooter. Get your <br /> power-pack.</p>
           </div>
         </div>
-        <img src={arrow6} alt="" className="size-32" />
+        <img src={arrow6} alt="" className="hidden lg:block size-32" />
       </div>
 
       {/* Box3 */}
-      <div className="w-full flex  items-center justify-center gap-1 pt-10 -translate-x-40">
+      <div className="w-full flex items-center justify-center gap-1 pt-10 lg:-translate-x-40">
         <div className="flex items-center justify-center gap-3 p-5 border-2 border-red-500 rounded-2xl">
-          <h2 className="text-red-500 text-9xl">3</h2>
+          <h2 className="text-red-500 text-6xl lg:text-9xl">3</h2>
           <div className="flex flex-col items-center gap-3">
-            <p className="font-bold text-3xl">Go& Grow</p>
-            <p className="text-xl">Start delivering. Unlock your <br /> potential.</p>
+            <p className="font-bold text-2xl lg:text-3xl">Go& Grow</p>
+            <p className="text-base lg:text-xl">Start delivering. Unlock your <br /> potential.</p>
           </div>
         </div>
       </div>
@@ -140,13 +140,13 @@ const Steps = () => {
 const Gallery = () => {
   return (
     <div className="w-full flex flex-col ">
-      <img src={arrow4} alt="" className="size-64" />
-      <div className="flex items-center justify-center -translate-y-32">
-        <div className=" -translate-y-40">
-          <p className="font-bold text-4xl" style={{fontFamily:"Sora"}}>The DASH Family:<br />More Than a Rental,<br />A Brotherhood</p>
+      <img src={arrow4} alt="" className="hidden lg:block size-64" />
+      <div className="flex flex-col lg:flex-row items-center justify-center -translate-y-32">
+        <div className=" xl:-translate-y-40 text-center lg:text-left px-4 lg:px-0">
+          <p className="font-bold text-3xl lg:text-4xl" style={{fontFamily:"Sora"}}>The DASH Family:<br />More Than a Rental,<br />A Brotherhood</p>
           <button className="bg-red-500 px-8 py-2 mt-4">Connect Now</button>
         </div>
-        <img src={GalleryImage} alt="" className="size-200"/>
+        <img src={GalleryImage} alt="" className="w-150 xl:w-auto"/>
       </div>
     </div>
   )
@@ -166,10 +166,10 @@ const Home = () => {
       />
 
       {/* Section 1 */}
-      <div className="w-full flex  justify-start z-10">
-        <div className="flex flex-col gap-5 items-center justify-center">
+      <div className="w-full flex flex-col lg:flex-row justify-start z-10 items-center lg:items-start gap-6 lg:gap-0 px-4 lg:px-0">
+        <div className="flex flex-col gap-5 items-center justify-center pt-20 ">
           <div className="flex flex-col items-center gap-10">
-            <p className="text-semibold font-md -rotate-90 w-20">Follow on</p>
+            <p className="text-semibold font-md -rotate-90 font-bold w-20">Follow on</p>
             <div>
               {" "}
               <img src={downarrow} alt="" />
@@ -190,9 +190,9 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col justify-start">
-          <img src={arrow1} alt="" />
+          <img src={arrow1} alt="" className="hidden lg:block" />
         </div>
-        <div className="pl-3 flex flex-col items-center justify-center gap-5">
+        <div className="pl-3 flex flex-col items-center justify-center pt-40 gap-5">
           <h3 className="font-bold text-4xl text-left">
             Powering Smarter Urban Mobility for Enterprises
           </h3>
@@ -205,16 +205,16 @@ const Home = () => {
           </button>
         </div>
         <div className="z-10 pt-5">
-          <img src={scooty1} alt="" />
+          <img src={scooty1} alt="" className='w-48 lg:w-auto' />
         </div>
       </div>
 
 
       {/* Section 2 */}
-      <div className="max-w-4xl -translate-y-50 flex items-center justify-center">
+      <div className="max-w-4xl -translate-y-50 flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0">
         <div>
           {" "}
-          <img src={arrow2} alt="" className="size-200" />
+          <img src={arrow2} alt="" className="hidden lg:block size-200" />
         </div>
         <div className="flex flex-col items-end justify-end  border-r-2 border-red w-full pr-4">
           <p className="font-semibold text-red-500 text-right">Why Choose Us</p>
@@ -236,8 +236,8 @@ const Home = () => {
 
 
       {/* Section 3 */}
-        <div className=" -translate-y-120 flex flex-wrap gap-10">
-            {data.map(({ title, description }) => (<Card title={title} description={description} />))}
+        <div className=" -translate-y-120 flex flex-col lg:flex-row flex-wrap gap-10 items-center">
+          {data.map((item, idx) => (<Card key={idx} title={item.title} description={item.description} />))}
         </div>
 
 
@@ -246,11 +246,11 @@ const Home = () => {
           {/* Background 2 */}
           <img src={bg2} alt="" className="absolute top-0" />
           {/* Section 4A */}
-          <div className="z-10 flex flex-col items-start justify-start mt-10 ml-60">
+          <div className="z-10 flex flex-col items-start justify-start mt-10 ml-6 xl:ml-60 px-4 lg:px-0">
               <h2 className="z-10 font-bold text-4xl mb-10" style={{fontFamily:"Sora"}}>The Ecosystem built for <br />
 Quick Commerce</h2>
             <div className="z-10 flex flex-col gap-5 ">
-              {data2.map(({ title, description }) => (<Card2 title={title} description={description} />))}
+              {data2.map((item, idx) => (<Card2 key={idx} title={item.title} description={item.description} />))}
             </div>
           </div>
         </div>
