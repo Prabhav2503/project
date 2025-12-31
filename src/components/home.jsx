@@ -28,17 +28,20 @@ const data2 = [
 ];
 
 const data3 = [
-  { title:"God Speed",
-    value:"500 +",
-    description:"Active Dashers"
+  {
+    title: "God Speed",
+    value: "500 +",
+    description: "Active Dashers"
   },
-  { title:"God Speed",
-    value:"10,000 +",
-    description:"Swaps Completed"
+  {
+    title: "God Speed",
+    value: "10,000 +",
+    description: "Swaps Completed"
   },
-  { title:"Investor Metrics",
-    value:"99.9%",
-    description:"Uptime Reliability"
+  {
+    title: "Investor Metrics",
+    value: "99.9%",
+    description: "Uptime Reliability"
   },
 ];
 
@@ -51,7 +54,7 @@ const cardVariants = {
 const Card = ({ title, description }) => {
   return (
     <motion.div
-      className="rounded-2xl border-2 border-[#cd1d1d] flex flex-col items-center justify-start w-60 xl:w-80 h-100 p-5 gap-3 hover:shadow-lg hover:scale-105 transition-transform duration-300"
+      className="rounded-2xl border-2 border-[#cd1d1d] flex flex-col items-center justify-start w-[280px] sm:w-60 xl:w-80 h-auto min-h-[200px] sm:h-100 p-5 gap-3 hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white"
       style={{ fontFamily: "Sora" }}
       initial="hidden"
       whileInView="visible"
@@ -73,7 +76,7 @@ const cardVariants2 = {
 const Card2 = ({ title, description }) => {
   return (
     <motion.div
-      className="rounded-2xl border-2 border-[#cd1d1d] flex flex-col items-center justify-start w-80 p-5 gap-3 hover:shadow-lg hover:scale-105 transition-transform duration-300"
+      className="rounded-2xl border-2 border-[#cd1d1d] flex flex-col items-center justify-start w-[280px] sm:w-80 p-5 gap-3 hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white"
       style={{ fontFamily: "Sora" }}
       initial="hidden"
       whileInView="visible"
@@ -91,23 +94,23 @@ const Card2 = ({ title, description }) => {
 const Stats = () => {
   return (
     <div
-      className="w-full relative flex flex-col items-center"
+      className="w-full relative flex flex-col items-center mt-8 lg:mt-0 pt-8 lg:pt-0"
       style={{ fontFamily: "Inter" }}
     >
-      {/* First Background */}
+      {/* First Background - hidden on mobile */}
       <img
         src={bg}
         alt=""
-        className="size-[900px] absolute right-0 top-0 -translate-y-48"
+        className="hidden lg:block size-[900px] absolute right-0 top-0 -translate-y-48"
       />
       <div className="flex flex-row w-full z-10">
         <img src={arrow3} alt="" className="hidden lg:block size-50" />
         <div className="flex flex-col w-full items-center">
-          <h2 className="font-bold text-4xl mb-8 text-center">Powering the Logistics of Tomorrow</h2>
+          <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl mb-8 text-center px-4">Powering the Logistics of Tomorrow</h2>
           <div className="w-full flex flex-col items-center">
             <div className="flex flex-col lg:flex-row items-center justify-center gap-10 pt-2">
               {data3.map((item, idx) => (
-                <div key={idx} className="rounded-2xl bg-white border-2 border-[#cd1d1d] p-5 flex flex-col items-center justify-center gap-5 w-80 h-50" style={{fontFamily:"Sora"}}>
+                <div key={idx} className="rounded-2xl bg-white border-2 border-[#cd1d1d] p-5 flex flex-col items-center justify-center gap-5 w-[280px] sm:w-80 h-auto min-h-[180px] sm:h-50" style={{ fontFamily: "Sora" }}>
                   <h3 className=" font-bold text-2xl">{item.title}</h3>
                   <div className="flex flex-col items-center justify-center gap-2">
                     <p className="font-bold text-[#cd1d1d] text-xl">{item.value}</p>
@@ -200,12 +203,12 @@ const Gallery = () => {
   return (
     <div className="w-full flex flex-col ">
       <img src={arrow4} alt="" className="hidden lg:block size-64" />
-      <div className="flex flex-col lg:flex-row items-center justify-center -translate-y-32">
-        <div className=" xl:-translate-y-40 text-center lg:text-left px-4 lg:px-0">
-          <p className="font-bold text-3xl lg:text-4xl" style={{fontFamily:"Sora"}}>The DASH Family:<br />More Than a Rental,<br />A Brotherhood</p>
+      <div className="flex flex-col lg:flex-row items-center justify-center translate-y-0 lg:-translate-y-32 mt-8 lg:mt-0">
+        <div className="translate-y-0 xl:-translate-y-40 text-center lg:text-left px-4 lg:px-0">
+          <p className="font-bold text-2xl sm:text-3xl lg:text-4xl" style={{ fontFamily: "Sora" }}>The DASH Family:<br />More Than a Rental,<br />A Brotherhood</p>
           <button className="text-white bg-[#cd1d1d] font-md px-8 py-3 text-lg transition duration-300 hover:bg-white hover:text-[#cd1d1d] hover:border hover:border-[#cd1d1d] mt-4">Rent Now</button>
         </div>
-        <img src={GalleryImage} alt="" className="w-150 xl:w-auto xl:translate-x-27 "/>
+        <img src={GalleryImage} alt="" className="w-[300px] sm:w-[400px] lg:w-150 xl:w-auto xl:translate-x-27 mt-4 lg:mt-0" />
       </div>
     </div>
   )
@@ -223,15 +226,15 @@ const Home = () => {
       className="w-full relative flex flex-col items-center"
       style={{ fontFamily: "Inter" }}
     >
-      {/* First Background */}
+      {/* First Background - hidden on mobile */}
       <img
         src={bg}
         alt=""
-        className="size-[900px] absolute right-0 top-0 -translate-y-25"
+        className="hidden lg:block size-[900px] absolute right-0 top-0 -translate-y-25"
       />
 
       {/* Section 1 */}
-      <div className="w-full flex flex-col lg:flex-row justify-start z-10 items-center lg:items-start gap-6 lg:gap-0 px-4 lg:px-0">
+      <div className="w-full flex flex-col lg:flex-row justify-start z-10 items-center lg:items-start gap-6 lg:gap-0 px-4 lg:px-0 overflow-visible">
         <div className="flex flex-col gap-5 items-center justify-center pt-2 lg:pt-10 ">
           <div className="flex flex-col items-center gap-10 mt-10 lg:mt-24">
             <motion.div
@@ -268,8 +271,8 @@ const Home = () => {
         <div className="flex flex-col justify-start">
           <img src={arrow1} alt="" className="hidden lg:block translate-y-40" />
         </div>
-        <div className="pl-3 flex flex-col items-start justify-center pt-60 gap-7">
-          <h3 className="font-bold text-5xl text-left">
+        <div className="pl-3 flex flex-col items-center lg:items-start justify-center pt-10 lg:pt-60 gap-7 text-center lg:text-left">
+          <h3 className="font-bold text-3xl sm:text-4xl lg:text-5xl">
             Powering Smarter Urban Mobility for Enterprises
           </h3>
           <p className="text-2xl">
@@ -280,12 +283,12 @@ const Home = () => {
             Connect With Us
           </button>
         </div>
-        <div className="z-10 pt-5">
+        <div className="z-10 pt-5 w-full flex justify-center lg:block">
           <motion.img
             src={scooty1}
             alt=""
-            className='w-400  translate-y-10'
-            initial={{ x: 300, opacity: 0 }}
+            className='w-[280px] sm:w-[350px] lg:w-400 translate-y-0 lg:translate-y-10'
+            initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 60, damping: 15, duration: 1 }}
           />
@@ -294,20 +297,20 @@ const Home = () => {
 
 
       {/* Section 2 */}
-      <div className="max-w-4xl -translate-y-50 flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0">
+      <div className="max-w-4xl translate-y-0 lg:-translate-y-50 flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 mt-8 lg:mt-0">
         <div>
           {" "}
           <img src={arrow2} alt="" className="hidden lg:block size-200" />
         </div>
-        <div className="flex flex-col items-end justify-end  border-r-2 border-[#cd1d1d] w-full pr-4">
-          <p className="font-semibold text-[#cd1d1d] text-right">Why Choose Us</p>
-          <h2 className="text-4xl font-bold leading-tight text-right">
+        <div className="flex flex-col items-center lg:items-end justify-end border-b-2 lg:border-b-0 lg:border-r-2 border-[#cd1d1d] w-full pb-4 lg:pb-0 pr-0 lg:pr-4 mb-4 lg:mb-0">
+          <p className="font-semibold text-[#cd1d1d] text-center lg:text-right">Why Choose Us</p>
+          <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-center lg:text-right">
             Why Our
             <span className="block whitespace-nowrap">Electric Vehicle</span>
           </h2>
         </div>
-        <div className="pl-5">
-          <p className="font-semibold">
+        <div className="pl-0 lg:pl-5 text-center lg:text-left">
+          <p className="font-semibold text-sm sm:text-base">
             Dash is built to remove friction from everyday mobility. With a
             system designed for long hours, real road conditions, and
             predictable support, Dash lets partners and drivers focus on work,
@@ -319,28 +322,28 @@ const Home = () => {
 
 
       {/* Section 3 */}
-        <div className="-translate-y-120 flex flex-row flex-wrap gap-4 lg:gap-10 items-center justify-center">
-          {data.map((item, idx) => (<Card key={idx} title={item.title} description={item.description} />))}
-        </div>
+      <div className="translate-y-0 lg:-translate-y-120 flex flex-row flex-wrap gap-4 lg:gap-10 items-center justify-center mt-8 lg:mt-0 px-4">
+        {data.map((item, idx) => (<Card key={idx} title={item.title} description={item.description} />))}
+      </div>
 
 
       {/* Section 4 */}
-        <div className="w-full relative -translate-y-100">
-          {/* Background 2 */}
-          <img src={bg2} alt="" className="absolute top-0" />
-          {/* Section 4A */}
-          <div className="z-10 flex flex-col items-start justify-start mt-10 ml-6 xl:ml-60 px-4 lg:px-0">
-              <h2 className="z-10 font-bold text-4xl mb-10" style={{fontFamily:"Sora"}}>The Ecosystem built for <br />
-Quick Commerce</h2>
-            <div className="z-10 flex flex-col gap-5 ">
-              {data2.map((item, idx) => (<Card2 key={idx} title={item.title} description={item.description} />))}
-            </div>
+      <div className="w-full relative translate-y-0 lg:-translate-y-100 mt-8 lg:mt-0">
+        {/* Background 2 - hidden on mobile */}
+        <img src={bg2} alt="" className="hidden lg:block absolute top-0" />
+        {/* Section 4A */}
+        <div className="z-10 flex flex-col items-center lg:items-start justify-start mt-10 ml-0 lg:ml-6 xl:ml-60 px-4 lg:px-0">
+          <h2 className="z-10 font-bold text-2xl sm:text-3xl lg:text-4xl mb-10 text-center lg:text-left" style={{ fontFamily: "Sora" }}>The Ecosystem built for <br />
+            Quick Commerce</h2>
+          <div className="z-10 flex flex-col gap-5 items-center lg:items-start w-full">
+            {data2.map((item, idx) => (<Card2 key={idx} title={item.title} description={item.description} />))}
           </div>
         </div>
+      </div>
 
-      <Stats/>
-      <Steps/>
-      <Gallery/>
+      <Stats />
+      <Steps />
+      <Gallery />
 
     </div>
   );

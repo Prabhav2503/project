@@ -21,9 +21,7 @@ const Navbar = () => {
       </div>
       <div className={`lg:flex flex-col lg:flex-row items-center justify-center gap-8 text-black font-semibold text-md cursor-pointer ${menuOpen ? 'flex' : 'hidden'} absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none z-40`} style={{ fontFamily: "Inter" }}>
         <Link to="/" className='navbar-link px-4 py-2 block' onClick={() => setMenuOpen(false)}>Home</Link>
-        <p className='navbar-link px-4 py-2 block'>About Us</p>
-        <p className='navbar-link px-4 py-2 block'>Service</p>
-        <p className='navbar-link px-4 py-2 block'>Blog</p>
+        <Link to="/booking" className='navbar-link px-4 py-2 block' onClick={() => setMenuOpen(false)}>Booking</Link>
       </div>
     </div>
   );

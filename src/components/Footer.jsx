@@ -1,30 +1,45 @@
 import React from 'react';
+import Logo from '../assets/logo.svg';
+import { Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <div className="w-full bg-pink-100 py-10 flex flex-col items-center justify-center">
-      <h2 className="text-lg font-semibold text-gray-600">UPSKILL FOR A BETTER FUTURE</h2>
-      <h1 className="text-3xl font-bold text-gray-800">Request More Information</h1>
-      <p className="text-center text-gray-600 mt-2">
-        Lift Media, LLC is a clinical stage healthcare company which is developing a unique.
-      </p>
-      <button className="bg-red-500 text-white px-6 py-2 mt-4 rounded">Connect Now</button>
-      <div className="flex items-center justify-center gap-6 mt-10">
-        <img src="linkedin-icon.svg" alt="LinkedIn" className="h-6" />
-        <img src="facebook-icon.svg" alt="Facebook" className="h-6" />
-        <img src="instagram-icon.svg" alt="Instagram" className="h-6" />
-        <img src="youtube-icon.svg" alt="YouTube" className="h-6" />
-      </div>
-      <div className="mt-10 text-center">
-        <img src="logo.svg" alt="DASH Mobility" className="h-8" />
-        <div className="flex items-center justify-center gap-6 mt-4">
-          <p className="text-gray-600">Support</p>
-          <p className="text-gray-600">About Us</p>
-          <p className="text-gray-600">FAQs</p>
+    <footer className="w-full mt-10">
+      {/* Main footer content */}
+      <div className="w-full bg-[#f8e8e8] py-8 px-4 lg:px-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+          {/* Logo */}
+          <img src={Logo} alt="DASH Mobility" className="h-10" />
+
+          {/* Navigation Links */}
+          <div className="flex items-center gap-8">
+            <a href="/" className="text-gray-700 hover:text-[#cd1d1d] transition-colors font-medium">Home</a>
+            <a href="/booking" className="text-gray-700 hover:text-[#cd1d1d] transition-colors font-medium">Booking</a>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
+            <a href="#" className="w-10 h-10 rounded-full border-2 border-gray-700 flex items-center justify-center hover:border-[#cd1d1d] hover:text-[#cd1d1d] transition-colors">
+              <Linkedin size={18} />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full border-2 border-gray-700 flex items-center justify-center hover:border-[#cd1d1d] hover:text-[#cd1d1d] transition-colors">
+              <Facebook size={18} />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full border-2 border-gray-700 flex items-center justify-center hover:border-[#cd1d1d] hover:text-[#cd1d1d] transition-colors">
+              <Instagram size={18} />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full border-2 border-gray-700 flex items-center justify-center hover:border-[#cd1d1d] hover:text-[#cd1d1d] transition-colors">
+              <Youtube size={18} />
+            </a>
+          </div>
         </div>
-        <p className="text-gray-600 mt-4">© 2025 DASH Mobility</p>
+
+        {/* Copyright */}
+        <div className="text-center mt-6 pt-4 border-t border-gray-300">
+          <p className="text-gray-600 text-sm">© 2025 DASH Mobility</p>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
