@@ -28,17 +28,20 @@ const data2 = [
 ];
 
 const data3 = [
-  { title:"God Speed",
-    value:"500 +",
-    description:"Active Dashers"
+  {
+    title: "God Speed",
+    value: "500 +",
+    description: "Active Dashers"
   },
-  { title:"God Speed",
-    value:"10,000 +",
-    description:"Swaps Completed"
+  {
+    title: "God Speed",
+    value: "10,000 +",
+    description: "Swaps Completed"
   },
-  { title:"Investor Metrics",
-    value:"99.9%",
-    description:"Uptime Reliability"
+  {
+    title: "Investor Metrics",
+    value: "99.9%",
+    description: "Uptime Reliability"
   },
 ];
 
@@ -98,16 +101,16 @@ const Stats = () => {
       <img
         src={bg}
         alt=""
-        className="size-[900px] absolute right-0 top-0 -translate-y-48"
+        className="size-[600px] lg:size-[900px] absolute right-0 top-0 -translate-y-20 lg:-translate-y-48"
       />
-      <div className="flex flex-row w-full z-10">
+      <div className="flex flex-row w-full z-10 pt-60 lg:pt-0">
         <img src={arrow3} alt="" className="hidden lg:block size-50" />
         <div className="flex flex-col w-full items-center">
           <h2 className="font-bold text-4xl mb-8 text-center">Powering the Logistics of Tomorrow</h2>
           <div className="w-full flex flex-col items-center">
             <div className="flex flex-col lg:flex-row items-center justify-center gap-10 pt-2">
               {data3.map((item, idx) => (
-                <div key={idx} className="rounded-2xl bg-white border-2 border-[#cd1d1d] p-5 flex flex-col items-center justify-center gap-5 w-80 h-50" style={{fontFamily:"Sora"}}>
+                <div key={idx} className="rounded-2xl bg-white border-2 border-[#cd1d1d] p-5 flex flex-col items-center justify-center gap-5 w-80 h-50" style={{ fontFamily: "Sora" }}>
                   <h3 className=" font-bold text-2xl">{item.title}</h3>
                   <div className="flex flex-col items-center justify-center gap-2">
                     <p className="font-bold text-[#cd1d1d] text-xl">{item.value}</p>
@@ -131,7 +134,7 @@ const stepVariants = {
 const Steps = () => {
   return (
     <div className="w-full">
-      <div className="w-full flex flex-col items-end pr-4 lg:pr-80 pt-20" style={{ fontFamily: "Sora" }}>
+      <div className="w-full flex flex-col items-center lg:items-end px-4 lg:pr-80 pt-20 text-center lg:text-right" style={{ fontFamily: "Sora" }}>
         <h2 className="font-bold text-[#cd1d1d] text-5xl">3 Steps</h2>
         <p className="font-bold text-3xl">to Your First Paycheck</p>
       </div>
@@ -198,14 +201,14 @@ const Steps = () => {
 
 const Gallery = () => {
   return (
-    <div className="w-full flex flex-col ">
+    <div className="w-full flex flex-col mt-20 lg:mt-0">
       <img src={arrow4} alt="" className="hidden lg:block size-64" />
-      <div className="flex flex-col lg:flex-row items-center justify-center -translate-y-32">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:-translate-y-32">
         <div className=" xl:-translate-y-40 text-center lg:text-left px-4 lg:px-0">
-          <p className="font-bold text-3xl lg:text-4xl" style={{fontFamily:"Sora"}}>The DASH Family:<br />More Than a Rental,<br />A Brotherhood</p>
-          <button className="text-white bg-[#cd1d1d] font-md px-8 py-3 text-lg transition duration-300 hover:bg-white hover:text-[#cd1d1d] hover:border hover:border-[#cd1d1d] mt-4">Rent Now</button>
+          <p className="font-bold text-3xl lg:text-4xl" style={{ fontFamily: "Sora" }}>The DASH Family:<br />More Than a Rental,<br />A Brotherhood</p>
+          <a href="/booking" className="text-white bg-[#cd1d1d] font-md px-8 py-3 text-lg transition duration-300 hover:bg-white hover:text-[#cd1d1d] hover:border hover:border-[#cd1d1d] mt-4 inline-block">Rent Now</a>
         </div>
-        <img src={GalleryImage} alt="" className="w-150 xl:w-auto xl:translate-x-27 "/>
+        <img src={GalleryImage} alt="" className="w-150 xl:w-auto xl:translate-x-27 " />
       </div>
     </div>
   )
@@ -227,12 +230,12 @@ const Home = () => {
       <img
         src={bg}
         alt=""
-        className="size-[900px] absolute right-0 top-0 -translate-y-25"
+        className="size-[600px] lg:size-[900px] absolute right-0 top-0 -translate-y-40 lg:-translate-y-25"
       />
 
       {/* Section 1 */}
       <div className="w-full flex flex-col lg:flex-row justify-start z-10 items-center lg:items-start gap-6 lg:gap-0 px-4 lg:px-0">
-        <div className="flex flex-col gap-5 items-center justify-center pt-2 lg:pt-10 ">
+        <div className="hidden lg:flex flex-col gap-5 items-center justify-center pt-2 lg:pt-10 ">
           <div className="flex flex-col items-center gap-10 mt-10 lg:mt-24">
             <motion.div
               initial="hidden"
@@ -265,10 +268,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-start">
+        <div className="hidden lg:flex flex-col justify-start">
           <img src={arrow1} alt="" className="hidden lg:block translate-y-40" />
         </div>
-        <div className="pl-3 flex flex-col items-start justify-center pt-60 gap-7">
+        <div className="pl-3 flex flex-col items-start justify-center pt-8 lg:pt-60 gap-7">
           <h3 className="font-bold text-5xl text-left">
             Powering Smarter Urban Mobility for Enterprises
           </h3>
@@ -276,15 +279,15 @@ const Home = () => {
             Dash provides reliable electric vehicle solutions for last-mile
             operations, designed for scale, efficiency, and sustainability.
           </p>
-          <button className="text-white bg-[#cd1d1d] font-md px-8 py-3 text-lg transition duration-300 hover:bg-white hover:text-[#cd1d1d] hover:border hover:border-[#cd1d1d]">
+          <a href="/contact" className="text-white bg-[#cd1d1d] font-md px-8 py-3 text-lg transition duration-300 hover:bg-white hover:text-[#cd1d1d] hover:border hover:border-[#cd1d1d] inline-block">
             Connect With Us
-          </button>
+          </a>
         </div>
-        <div className="z-10 pt-5">
+        <div className="z-10 pt-5 w-full flex justify-end lg:block overflow-hidden">
           <motion.img
             src={scooty1}
             alt=""
-            className='w-400  translate-y-10'
+            className='w-300 translate-y-10 max-w-[460px] lg:max-w-none'
             initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 60, damping: 15, duration: 1 }}
@@ -294,7 +297,7 @@ const Home = () => {
 
 
       {/* Section 2 */}
-      <div className="max-w-4xl -translate-y-50 flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0">
+      <div className="max-w-4xl lg:-translate-y-50 flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 mt-10 lg:mt-0">
         <div>
           {" "}
           <img src={arrow2} alt="" className="hidden lg:block size-200" />
@@ -319,28 +322,49 @@ const Home = () => {
 
 
       {/* Section 3 */}
-        <div className="-translate-y-120 flex flex-row flex-wrap gap-4 lg:gap-10 items-center justify-center">
-          {data.map((item, idx) => (<Card key={idx} title={item.title} description={item.description} />))}
-        </div>
+      <div className="lg:-translate-y-120 flex flex-row flex-wrap gap-4 lg:gap-10 items-center justify-center mt-10 lg:mt-0">
+        {data.map((item, idx) => (<Card key={idx} title={item.title} description={item.description} />))}
+      </div>
 
 
       {/* Section 4 */}
-        <div className="w-full relative -translate-y-100">
-          {/* Background 2 */}
-          <img src={bg2} alt="" className="absolute top-0" />
-          {/* Section 4A */}
-          <div className="z-10 flex flex-col items-start justify-start mt-10 ml-6 xl:ml-60 px-4 lg:px-0">
-              <h2 className="z-10 font-bold text-4xl mb-10" style={{fontFamily:"Sora"}}>The Ecosystem built for <br />
-Quick Commerce</h2>
-            <div className="z-10 flex flex-col gap-5 ">
-              {data2.map((item, idx) => (<Card2 key={idx} title={item.title} description={item.description} />))}
-            </div>
+      <div className="w-full relative lg:-translate-y-100">
+        {/* Background 2 */}
+        <img src={bg2} alt="" className="absolute top-0 hidden lg:block" />
+        {/* Section 4A */}
+        <div className="z-10 flex flex-col items-center lg:items-start justify-start mt-10 lg:ml-6 xl:ml-60 px-4 lg:px-0 w-full">
+          <h2 className="z-10 font-bold text-4xl mb-10 text-center lg:text-left" style={{ fontFamily: "Sora" }}>The Ecosystem built for <br />
+            Quick Commerce</h2>
+          <div className="z-10 flex flex-col gap-5 ">
+            {data2.map((item, idx) => (<Card2 key={idx} title={item.title} description={item.description} />))}
           </div>
         </div>
+      </div>
 
-      <Stats/>
-      <Steps/>
-      <Gallery/>
+      <Stats />
+      <Steps />
+      <Gallery />
+
+      {/* CTA Section */}
+      <div className="w-full bg-[#cd1d1d] py-16 flex flex-col items-center justify-center gap-8" style={{ fontFamily: 'Inter, sans-serif' }}>
+        <h2 className="text-white text-3xl lg:text-4xl font-bold text-center px-4">
+          Ready to start your journey?
+        </h2>
+        <div className="flex items-center gap-4">
+          <a
+            href="/booking"
+            className="bg-white text-gray-900 font-semibold px-7 py-3 rounded-md hover:bg-gray-100 transition-colors text-base"
+          >
+            Rent Now
+          </a>
+          <a
+            href="#"
+            className="bg-[#a81616] text-white font-semibold px-7 py-3 rounded-md hover:bg-[#8f1010] transition-colors text-base"
+          >
+            Partner with Us
+          </a>
+        </div>
+      </div>
 
     </div>
   );
