@@ -264,25 +264,61 @@ const Home = () => {
               <img src={instagram} alt="" className="size-5" />
             </div>
             <div className="rounded-full p-2 border border-2 border-[#cd1d1d] flex items-center justify-center transition-transform duration-300 hover:scale-110">
-              <mg src={facebook} alt="" className="size-5" />
+              <img src={facebook} alt="" className="size-5" />
             </div>
           </div>
         </div>
         <div className="hidden lg:flex flex-col justify-start">
           <img src={arrow1} alt="" className="hidden lg:block translate-y-40" />
         </div>
-        <div className="pl-3 flex flex-col items-start justify-center pt-8 lg:pt-60 gap-7">
-          <h3 className="font-bold text-5xl text-left">
-            Powering Smarter Urban Mobility for Enterprises
-          </h3>
-          <p className="text-2xl">
+        <motion.div
+          className="pl-3 flex flex-col items-start justify-center pt-8 lg:pt-60 gap-7 max-w-4xl"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: {
+                staggerChildren: 0.2,
+                duration: 0.8,
+                ease: "easeOut"
+              }
+            }
+          }}
+        >
+          <motion.h3
+            className="font-bold text-5xl lg:text-7xl text-left leading-[1.1]"
+            style={{ fontFamily: "Sora, sans-serif" }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
+            Powering Smarter <br className="hidden lg:block" /> Urban Mobility for Enterprises
+          </motion.h3>
+          <motion.p
+            className="text-xl lg:text-2xl opacity-90 max-w-2xl"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
             Dash provides reliable electric vehicle solutions for last-mile
             operations, designed for scale, efficiency, and sustainability.
-          </p>
-          <a href="/contact" className="text-white bg-[#cd1d1d] font-md px-8 py-3 text-lg transition duration-300 hover:bg-white hover:text-[#cd1d1d] hover:border hover:border-[#cd1d1d] inline-block">
-            Connect With Us
-          </a>
-        </div>
+          </motion.p>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
+            <a href="/contact" className="text-white bg-[#cd1d1d] font-semibold px-10 py-4 text-xl transition duration-300 hover:bg-white hover:text-[#cd1d1d] hover:border hover:border-[#cd1d1d] inline-block rounded-md shadow-lg shadow-red-200">
+              Connect With Us
+            </a>
+          </motion.div>
+        </motion.div>
         <div className="z-10 pt-5 w-full flex justify-end lg:block overflow-hidden">
           <motion.img
             src={scooty1}
@@ -358,7 +394,7 @@ const Home = () => {
             Rent Now
           </a>
           <a
-            href="#"
+            href="/contact"
             className="bg-[#a81616] text-white font-semibold px-7 py-3 rounded-md hover:bg-[#8f1010] transition-colors text-base"
           >
             Partner with Us
