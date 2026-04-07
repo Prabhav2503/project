@@ -9,12 +9,16 @@ import AboutUs from './components/AboutUs.jsx';
 import TermsOfService from './components/TermsOfService.jsx';
 import FleetOs from './components/FleetOs.jsx';
 import KYC from './components/KYC.jsx';
+import DriverManagement from './components/DriverManagement.jsx';
+import Vehicles from './components/Vehicles.jsx';
+import Payments from './components/Payments.jsx';
+import Maintenance from './components/Maintenance.jsx';
 import NotFound from './NotFound.jsx';
 
 const App = () => {
   const location = useLocation();
   const isBookingPage = location.pathname === '/booking';
-  const isFleetOS = location.pathname === '/fleet-os' || location.pathname === '/kyc';
+  const isFleetOS = location.pathname === '/fleet-os' || location.pathname === '/kyc' || location.pathname === '/driver-management' || location.pathname === '/vehicles' || location.pathname === '/payments' || location.pathname === '/maintenance';
   const needsPadding = !isBookingPage && !isFleetOS;
 
   return (
@@ -28,6 +32,10 @@ const App = () => {
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/fleet-os" element={<FleetOs />} />
         <Route path="/kyc" element={<KYC />} />
+        <Route path="/driver-management" element={<DriverManagement />} />
+        <Route path="/vehicles" element={<Vehicles />} />
+        <Route path="/payments" element={<Payments />} />
+        <Route path="/maintenance" element={<Maintenance />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {!isBookingPage && <Footer />}

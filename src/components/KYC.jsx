@@ -208,18 +208,7 @@ function KYCHero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,black_75%)] pointer-events-none" />
 
       <div className="max-w-[900px] mx-auto text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/15 rounded-full px-4 py-2 mb-8"
-        >
-          <div className="relative">
-            <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-            <div className="absolute inset-0 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping" />
-          </div>
-          <span className="text-[13px] text-emerald-300">State-of-the-Art Verification Pipeline</span>
-        </motion.div>
+
 
         <motion.h1
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
@@ -647,10 +636,7 @@ function PipelineSection() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 bg-white/[0.04] border border-white/[0.06] rounded-full px-4 py-2 mb-6">
-            <Shield className="w-4 h-4 text-gray-400" />
-            <span className="text-sm text-gray-400">Verification Pipeline</span>
-          </div>
+
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
             Five automated{" "}
             <span className="bg-gradient-to-r from-[#cd1d1d] to-[#ff4444] bg-clip-text text-transparent">
@@ -744,10 +730,7 @@ function AdminApprovalSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/15 rounded-full px-4 py-2 mb-6">
-            <BadgeCheck className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm text-emerald-300">Step 06 — Final Layer</span>
-          </div>
+
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
             Admin Approval
             <br />
@@ -1317,25 +1300,9 @@ function KYCCTA() {
               className="group bg-white text-black px-10 py-4 rounded-full flex items-center gap-2 shadow-2xl shadow-white/10"
               style={{ fontWeight: 500, fontSize: "15px" }}
             >
-              Start Free Trial
+              Book Demo
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </motion.button>
-            <Link
-              to="/"
-              className="bg-white/[0.05] border border-white/[0.08] text-white px-10 py-4 rounded-full hover:bg-white/[0.1] transition-all text-[15px] text-center"
-              style={{ fontWeight: 500 }}
-            >
-              Back to Home
-            </Link>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-8 text-sm text-gray-500">
-            {["No credit card required", "Setup in 5 minutes", "Cancel anytime"].map((item, i) => (
-              <span key={i} className="flex items-center gap-2">
-                <div className="w-1 h-1 bg-emerald-400 rounded-full" />
-                {item}
-              </span>
-            ))}
           </div>
         </motion.div>
       </div>
