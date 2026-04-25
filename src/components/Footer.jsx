@@ -110,7 +110,7 @@ const Footer = () => {
             © {currentYear} DASH Mobility Pvt Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-gray-400 hover:text-gray-700 text-[13px] transition-colors">Privacy Policy</a>
+            <a href="/privacy" className="text-gray-400 hover:text-gray-700 text-[13px] transition-colors">Privacy Policy</a>
             <a href="/terms" className="text-gray-400 hover:text-gray-700 text-[13px] transition-colors">Terms of Service</a>
           </div>
           <button

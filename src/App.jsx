@@ -7,6 +7,7 @@ import BookingPage from './BookingPage.jsx';
 import ContactUs from './components/ContactUs.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import TermsOfService from './components/TermsOfService.jsx';
+import PrivacyPolicy from './components/PrivacyPolicy.jsx';
 import FleetOs from './components/FleetOs.jsx';
 import KYC from './components/KYC.jsx';
 import DriverManagement from './components/DriverManagement.jsx';
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/fleet-os" element={<FleetOs />} />
         <Route path="/kyc" element={<KYC />} />
         <Route path="/driver-management" element={<DriverManagement />} />
